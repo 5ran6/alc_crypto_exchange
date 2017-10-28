@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="30dp"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right|top"
+        android:gravity="center"
+        android:text="X"
+        android:textColor="@color/Red"
+        android:textSize="10dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/card_currency_btc_flag"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/coins" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:gravity="center" android:textStyle="italic"
+
+        android:hint="Enter the amount"
+        android:textSize="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <ImageView
+        android:id="@+id/btc_currency_flag"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/btc_icon" />
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp" android:textStyle="italic"
+
+        android:gravity="center"
+        android:hint="Equivalent amount in BTC" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:id="@+id/convert_currency_btc"
+        android:textStyle="italic"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_btn_orange"
+        android:text="@string/convert" />
+
+</LinearLayout>

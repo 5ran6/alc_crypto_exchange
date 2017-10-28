@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right|top"
+        android:gravity="center"
+        android:text="X"
+        android:textColor="@color/Red"
+        android:textSize="10dp"
+
+        />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/eth" />
+
+    <EditText
+        android:id="@+id/eth_value"
+        android:layout_width="200dp"
+
+        android:layout_height="30dp"
+        android:gravity="center"
+
+        android:hint="Enter the amount of Ethereum"
+        android:textSize="10dp"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <ImageView
+        android:id="@+id/eth_currency_flag"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/coins" />
+
+
+    <TextView
+        android:id="@+id/eth_currency"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:hint="Equivalent amount"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <Button
+        android:id="@+id/convert_eth_currency"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_btn_black_pearl"
+        android:text="@string/convert"
+        android:textColor="@color/White"
+        android:textStyle="italic" />
+
+
+</LinearLayout>
