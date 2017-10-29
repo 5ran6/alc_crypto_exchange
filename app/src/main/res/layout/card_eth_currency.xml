@@ -14,6 +14,7 @@
         android:text="X"
         android:textColor="@color/Red"
         android:textSize="10dp"
+        android:visibility="gone"
 
         />
 
@@ -29,7 +30,7 @@
         android:layout_height="30dp"
         android:gravity="center"
 
-        android:hint="Enter the amount of Ethereum"
+        android:hint="@string/enter_amount_eth"
         android:textSize="10dp"
         android:textStyle="italic" />
 
@@ -37,11 +38,17 @@
         android:layout_width="match_parent"
         android:layout_height="2dp" />
 
+
     <ImageView
         android:id="@+id/eth_currency_flag"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:src="@drawable/coins" />
+
+    <Spinner
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:entries="@array/flags"></Spinner>
 
 
     <TextView
@@ -49,7 +56,7 @@
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:gravity="center"
-        android:hint="Equivalent amount"
+        android:hint="@string/equivalent_amount"
         android:textStyle="italic" />
 
     <View

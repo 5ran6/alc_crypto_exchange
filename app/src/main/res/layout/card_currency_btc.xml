@@ -10,7 +10,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="right|top"
-        android:gravity="center"
+        android:gravity="center" android:visibility="gone"
         android:text="X"
         android:textColor="@color/Red"
         android:textSize="10dp"
@@ -22,13 +22,18 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:src="@drawable/coins" />
+    <Spinner
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:entries="@array/flags"
+        ></Spinner>
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:gravity="center" android:textStyle="italic"
 
-        android:hint="Enter the amount"
+        android:hint="@string/enter_amount"
         android:textSize="10dp" />
 
     <View
