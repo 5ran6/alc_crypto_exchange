@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="crytocompare.com.cryptoexchange.Dashboard">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/btc_"
+                android:textColor="@color/Black"
+
+                android:textSize="20sp"
+                android:textStyle="italic|bold" />
+
+            <include
+                android:id="@+id/dash_btc_currency"
+                layout="@layout/card_btc_currency" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/eth_"
+                android:textColor="@color/Black"
+
+                android:textSize="20sp"
+                android:textStyle="italic|bold" />
+
+            <include
+                android:id="@+id/dash_eth_currency"
+                layout="@layout/card_eth_currency" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

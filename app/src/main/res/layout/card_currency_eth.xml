@@ -31,7 +31,8 @@
     <EditText
         android:layout_width="200dp"
         android:textStyle="italic"
-        android:layout_height="30dp"
+        android:layout_height="40dp"         android:inputType="numberDecimal"
+
         android:gravity="center"
         android:hint="@string/enter_amount"
         android:textSize="10dp" />
@@ -62,7 +63,7 @@ android:textStyle="italic"
         android:layout_height="40dp"
         android:id="@+id/convert_currency_eth"
         android:textStyle="italic"
-        android:background="@drawable/custom_btn_black_pearl"
+        android:background="@drawable/custom_btn_orange"
         android:text="@string/convert"
         android:textColor="@color/White" />
 

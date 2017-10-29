@@ -8,14 +8,13 @@
 
     <Button
         android:layout_width="30dp"
-        android:visibility="gone"    android:layout_height="30dp"
+        android:layout_height="30dp"
         android:layout_gravity="right|top"
         android:gravity="center"
         android:text="X"
         android:textColor="@color/Red"
         android:textSize="10dp"
-
-        />
+        android:visibility="gone" />
 
     <ImageView
         android:layout_width="75dp"
@@ -25,10 +24,12 @@
     <EditText
         android:id="@+id/btc_value"
         android:layout_width="200dp"
+        android:layout_height="40dp"
 
-        android:layout_height="30dp"
+
         android:gravity="center"
         android:hint="Enter the amount of Bitcoin"
+        android:inputType="numberDecimal"
         android:textSize="10dp"
         android:textStyle="italic" />
 
@@ -41,11 +42,11 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:src="@drawable/coins" />
+
     <Spinner
         android:layout_width="75dp"
         android:layout_height="25dp"
-        android:entries="@array/flags"
-        ></Spinner>
+        android:entries="@array/flags"></Spinner>
 
 
     <TextView
@@ -62,11 +63,11 @@
         android:layout_height="2dp" />
 
     <Button
+        android:id="@+id/convert_btc_currency"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:background="@drawable/custom_btn_black_pearl"
         android:text="@string/convert"
-        android:id="@+id/convert_btc_currency"
         android:textColor="@color/White"
         android:textStyle="italic" />
 
