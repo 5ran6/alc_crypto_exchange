@@ -20,6 +20,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/btc_"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -33,7 +34,9 @@
                 android:id="@+id/dash_btc_currency"
                 layout="@layout/card_btc_currency" />
 
+
         </LinearLayout>
+
 
 
         <LinearLayout
@@ -44,6 +47,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/eth_"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -57,7 +61,12 @@
                 android:id="@+id/dash_eth_currency"
                 layout="@layout/card_eth_currency" />
 
-        </LinearLayout>
 
+        </LinearLayout>
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/progressETH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </FrameLayout>

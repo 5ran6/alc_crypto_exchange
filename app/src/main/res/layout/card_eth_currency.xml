@@ -26,12 +26,12 @@
     <EditText
         android:id="@+id/eth_value"
         android:layout_width="200dp"
-        android:inputType="numberDecimal"
-
         android:layout_height="40dp"
-        android:gravity="center"
 
+        android:gravity="center"
         android:hint="@string/enter_amount_eth"
+
+        android:inputType="numberDecimal"
         android:textSize="10dp"
         android:textStyle="italic" />
 
@@ -47,6 +47,7 @@
         android:src="@drawable/coins" />
 
     <Spinner
+        android:id="@+id/countries_eth"
         android:layout_width="75dp"
         android:layout_height="25dp"
         android:entries="@array/flags"></Spinner>
@@ -73,5 +74,9 @@
         android:textColor="@color/White"
         android:textStyle="italic" />
 
-
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progressETH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
