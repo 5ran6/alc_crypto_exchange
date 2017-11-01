@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:dialogIcon="@drawable/ic_settings_black_24dp"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:key="@string/sp_key_user_name"
+        android:title="Input your name" />
+    <!--
+        ListPreference
+            A Preference that displays a list of entries as a dialog.
+
+            This preference will store a string into the SharedPreferences. This string will be
+            the value from the setEntryValues(CharSequence[]) array.
+    -->
+    <!--
+        android:entries
+            The human-readable array to present as a list. Each entry must have a corresponding
+            index in entryValues.
+
+            Must be a reference to another resource, in the form "@[+][package:]type:name" or to a
+            theme attribute in the form "?[package:][type:]name".
+
+            This corresponds to the global attribute resource symbol entries.
+    -->
+    <!--
+        android:entryValues
+            The array to find the value to save for a preference when an entry from entries is
+            selected. If a user clicks on the second item in entries, the second item in this array
+            will be saved to the preference.
+
+            Must be a reference to another resource, in the form "@[+][package:]type:name" or to
+            a theme attribute in the form "?[package:][type:]name".
+
+            This corresponds to the global attribute resource symbol entryValues.
+    -->
+    <!--
+        android:defaultValue
+            The default value for the preference, which will be set either if persistence is off
+            or persistence is on and the preference is not found in the persistent storage.
+
+            May be a reference to another resource, in the form "@[+][package:]type:name" or to a
+            theme attribute in the form "?[package:][type:]name".
+
+            May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for
+            a unicode character.
+
+            May be an integer value, such as "100".
+
+            May be a boolean value, either "true" or "false".
+
+            May be a floating point value, such as "1.2".
+
+            This corresponds to the global attribute resource symbol defaultValue.
+    -->
+    <!--
+        android:icon
+            The optional icon for the preference
+
+            Must be a reference to another resource, in the form "@[+][package:]type:name" or to
+            a theme attribute in the form "?[package:][type:]name".
+
+            This corresponds to the global attribute resource symbol icon.
+    -->
+    <ListPreference
+        android:defaultValue="#00FFFF"
+        android:dialogIcon="@drawable/ic_settings_black_24dp"
+        android:entries="@array/flags"
+        android:entryValues="@array/foreground_color_values_array"
+        android:icon="@drawable/settings"
+        android:key="@string/sp_key_foreground_color"
+        android:summary="Select a foreground color"
+        android:title="Foreground Color" />
+    <ListPreference
+        android:defaultValue="#DC143C"
+        android:dialogIcon="@drawable/ic_settings_black_24dp"
+        android:entries="@array/background_color_names_array"
+        android:entryValues="@array/background_color_values_array"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:key="@string/sp_key_background_color"
+        android:summary="Choose a background color"
+        android:title="Background Color" />
+</PreferenceScreen>

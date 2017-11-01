@@ -20,7 +20,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/header_conversion0"
+                android:id="@+id/btc_"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -30,9 +30,7 @@
                 android:textSize="20sp"
                 android:textStyle="italic|bold" />
 
-            <include
-                android:id="@+id/headerxml"
-                layout="@layout/card_btc_currency" />
+            <include layout="@layout/card_btc_currency" />
 
         </LinearLayout>
 
@@ -45,7 +43,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/header_conversion1"
+                android:id="@+id/_btc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -55,10 +53,11 @@
                 android:textStyle="italic|bold" />
 
             <include
-                android:id="@+id/headerxml"
+
                 layout="@layout/card_currency_btc" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 </FrameLayout>

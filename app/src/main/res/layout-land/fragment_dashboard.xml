@@ -34,9 +34,7 @@
                 android:id="@+id/dash_btc_currency"
                 layout="@layout/card_btc_currency" />
 
-
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -63,10 +61,7 @@
 
 
         </LinearLayout>
-        <ProgressBar
-            android:visibility="invisible"
-            android:id="@+id/progressETH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
 </FrameLayout>

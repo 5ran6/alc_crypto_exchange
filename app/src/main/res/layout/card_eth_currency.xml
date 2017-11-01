@@ -47,14 +47,14 @@
         android:src="@drawable/coins" />
 
     <Spinner
-        android:id="@+id/countries_eth"
+        android:id="@+id/eth_currency"
         android:layout_width="75dp"
         android:layout_height="25dp"
         android:entries="@array/flags"></Spinner>
 
 
     <TextView
-        android:id="@+id/eth_currency"
+        android:id="@+id/eth_currency_result"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:gravity="center"
@@ -76,7 +76,7 @@
 
     <ProgressBar
         android:visibility="invisible"
-        android:id="@+id/progressETH"
+        android:id="@+id/progressETH_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -41,10 +41,10 @@
         android:id="@+id/btc_currency_flag"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/afn" />
+        android:src="@drawable/coins" />
 
     <Spinner
-        android:id="@+id/countries_btc"
+        android:id="@+id/countries_btc_"
         android:layout_width="75dp"
         android:layout_height="25dp"
         android:entries="@array/flags"></Spinner>
@@ -74,7 +74,7 @@
 
     <ProgressBar
         android:visibility="invisible"
-        android:id="@+id/progressBTC"
+        android:id="@+id/progressBTC_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>
