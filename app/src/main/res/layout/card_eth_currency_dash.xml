@@ -19,22 +19,17 @@
         />
 
     <ImageView
-        android:id="@+id/currency_eth_flag"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/coins" />
-
-    <Spinner
-        android:id="@+id/currency_eth"
-        android:layout_width="75dp"
-        android:layout_height="25dp"
-        android:entries="@array/flags"></Spinner>
+        android:src="@drawable/eth" />
 
     <EditText
+        android:id="@+id/eth_value"
         android:layout_width="200dp"
         android:layout_height="40dp"
+
         android:gravity="center"
-        android:hint="@string/enter_amount"
+        android:hint="@string/enter_amount_eth"
 
         android:inputType="numberDecimal"
         android:textSize="10dp"
@@ -44,19 +39,26 @@
         android:layout_width="match_parent"
         android:layout_height="2dp" />
 
+
     <ImageView
+        android:id="@+id/eth_currency_flag"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/eth" />
+        android:src="@drawable/coins" />
+
+    <Spinner
+        android:id="@+id/countries_eth_dash"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:entries="@array/flags"></Spinner>
 
 
     <TextView
-        android:id="@+id/currency_eth_result"
-
+        android:id="@+id/eth_currency"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:gravity="center"
-        android:hint="Equivalent amount in ETH"
+        android:hint="@string/equivalent_amount"
         android:textStyle="italic" />
 
     <View
@@ -64,18 +66,17 @@
         android:layout_height="2dp" />
 
     <Button
-        android:id="@+id/convert_currency_eth"
+        android:id="@+id/convert_eth_currency"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:background="@drawable/custom_btn_orange"
+        android:background="@drawable/custom_btn_black_pearl"
         android:text="@string/convert"
         android:textColor="@color/White"
         android:textStyle="italic" />
 
     <ProgressBar
-        android:id="@+id/progress_ETH"
+        android:id="@+id/progressETH_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible" />
-
 </LinearLayout>

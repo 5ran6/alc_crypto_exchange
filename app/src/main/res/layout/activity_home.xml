@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_img"
+        tools:context="crytocompare.com.cryptoexchange.Launcher">
+
+        <FrameLayout
+            android:id="@+id/flcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fitsSystemWindows="true">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_backdrop_height"
+                    android:fitsSystemWindows="true"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:id="@+id/collapsing_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fitsSystemWindows="true"
+                        app:contentScrim="?attr/colorPrimary"
+                        app:expandedTitleMarginEnd="64dp"
+                        app:expandedTitleMarginStart="48dp"
+                        app:expandedTitleTextAppearance="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/backdrop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fitsSystemWindows="true"
+                                android:scaleType="centerCrop"
+                                app:layout_collapseMode="parallax" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_horizontal">
+
+                                <RadioGroup
+                                    android:id="@+id/radioGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/radio_button_btc"
+                                        android:layout_width="170dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/radio_button_left"
+                                        android:button="@android:color/transparent"
+                                        android:checked="true"
+                                        android:text="Bitcoin (BTC)"
+                                        android:textColor="#ffffff" />
+
+                                    <RadioButton
+                                        android:id="@+id/radio_button_eth"
+                                        android:layout_width="170dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/radio_button_right"
+                                        android:button="@android:color/transparent"
+                                        android:text="Ethereum (ETH)"
+                                        android:textColor="#ffffff" />
+                                </RadioGroup>
+
+                                <RelativeLayout
+                                    android:id="@+id/linearLayout1"
+                                    android:layout_width="150dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginTop="50dp"
+                                    android:background="@android:color/transparent"
+                                    android:padding="10dp"
+                                    android:textColor="@android:color/darker_gray">
+
+
+                                    <Spinner
+                                        android:id="@+id/quote_currency"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content" />
+                                    <!-- android:theme="?android:attr/borderlessButtonStyle"-->
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/linearLayout2"
+                                    android:layout_width="150dp"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_below="@+id/radioGroup"
+                                    android:background="@android:color/transparent"
+                                    android:padding="10dp"
+                                    android:textColor="@android:color/darker_gray">
+
+                                    <Button
+                                        android:id="@+id/add_button"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/custom_btn_green_pearl"
+                                        android:text="Add"
+                                        android:textColor="@android:color/white" />
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            app:layout_collapseMode="pin"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                    </android.support.design.widget.CollapsingToolbarLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/content_home" />
+
+                <!--    <TextView
+                        android:id="@+id/empty_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/empty_view"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:textSize="20dp"
+                        android:textColor="@color/divider"
+                        android:layout_alignBottom="@+id/include"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/include"/>-->
+
+
+                <!-- <android.support.design.widget.FloatingActionButton
+                     android:id="@+id/fab"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical|center_horizontal"
+                     android:layout_margin="@dimen/fab_margin"
+                     android:src="@drawable/ic_add"
+                     app:layout_anchor="@+id/appbar"
+                     app:layout_anchorGravity="bottom|center_horizontal" />-->
+            </android.support.design.widget.CoordinatorLayout>
+
+            <ViewStub
+                android:id="@+id/VSFirstTimeProcesses"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="35dp"
+                android:layout="@layout/layer_hint" />
+
+
+            <FrameLayout
+                android:id="@+id/LNavigationBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/gradient"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#fff"
+            app:headerLayout="@layout/header"
+            app:itemIconTint="@color/_grey_605E5C"
+            app:itemTextColor="@color/_grey_605E5C"
+            app:menu="@menu/drawermenu"></android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+</merge>

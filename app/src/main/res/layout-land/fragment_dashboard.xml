@@ -32,7 +32,7 @@
 
             <include
                 android:id="@+id/dash_btc_currency"
-                layout="@layout/card_btc_currency" />
+                layout="@layout/card_btc_currency_dash" />
 
         </LinearLayout>
 
@@ -57,11 +57,17 @@
 
             <include
                 android:id="@+id/dash_eth_currency"
-                layout="@layout/card_eth_currency" />
+                layout="@layout/card_eth_currency_dash" />
 
 
         </LinearLayout>
 
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_menu_today" />
 
     </LinearLayout>
 </FrameLayout>

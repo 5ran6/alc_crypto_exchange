@@ -73,8 +73,8 @@
         android:textStyle="italic" />
 
     <ProgressBar
-        android:visibility="invisible"
         android:id="@+id/progressBTC_"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 </LinearLayout>
