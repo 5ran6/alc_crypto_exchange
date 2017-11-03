@@ -24,6 +24,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -464,6 +465,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText("");
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
+                    base_spinner.setVisibility(View.INVISIBLE);
+                    btn_Add.setVisibility(View.INVISIBLE);
+                    radio_btc.setVisibility(View.INVISIBLE);
+                    radio_eth.setVisibility(View.INVISIBLE);
+                    recyclerView.setVisibility(View.INVISIBLE);
 
                 } catch (Exception e) {
                 }
@@ -474,6 +480,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText(R.string.current_currency);
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
+                    base_spinner.setVisibility(View.INVISIBLE);
+                    btn_Add.setVisibility(View.INVISIBLE);
+                    radio_btc.setVisibility(View.INVISIBLE);
+                    radio_eth.setVisibility(View.INVISIBLE);
+                    recyclerView.setVisibility(View.INVISIBLE);
 
                 } catch (Exception e) {
                 }
@@ -485,6 +496,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
 //              curentCurrency.setImageDrawable(ContextCompat.getDrawable(Launcher.this, R.drawable.eth_icon));
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
+                    base_spinner.setVisibility(View.INVISIBLE);
+                    btn_Add.setVisibility(View.INVISIBLE);
+                    radio_btc.setVisibility(View.INVISIBLE);
+                    radio_eth.setVisibility(View.INVISIBLE);
+                    recyclerView.setVisibility(View.INVISIBLE);
 
                 } catch (Exception e) {
                 }
@@ -496,6 +512,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText("");
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
+                    base_spinner.setVisibility(View.INVISIBLE);
+                    btn_Add.setVisibility(View.INVISIBLE);
+                    radio_btc.setVisibility(View.INVISIBLE);
+                    radio_eth.setVisibility(View.INVISIBLE);
+                    recyclerView.setVisibility(View.INVISIBLE);
 
                 } catch (Exception e) {
                 }
@@ -505,14 +526,30 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 fragmentClass = Exit.class;
                 curentCurrency.setImageResource(R.drawable.exit);
                 currentTextView.setText("");
+                Glide.with(this).load(R.drawable.background_img).into(img_cover);
+                base_spinner.setVisibility(View.INVISIBLE);
+                btn_Add.setVisibility(View.INVISIBLE);
+                radio_btc.setVisibility(View.INVISIBLE);
+                radio_eth.setVisibility(View.INVISIBLE);
+                recyclerView.setVisibility(View.INVISIBLE);
+             //     Glide.with(this).onDestroy();
 
-
-//                mainLay.setBackground(getDrawable(R.drawable.background_img));
-                try {
-                    //                 Glide.with(this).load(R.drawable.background_img).into(img_cover);
-                    Glide.with(this).onDestroy();
-                } catch (Exception e) {
-                }
+//
+//                //mainLay.setBackground(getDrawable(this, R.drawable.background_img));
+//                try {
+//                    //                 Glide.with(this).load(R.drawable.background_img).into(img_cover);
+//                    //mainLay.setBackground(getDrawable(getApplicationContext(), R.drawable.background_img));
+//                    //      mainLay.setVisibility(View.INVISIBLE);
+//                    base_spinner.setVisibility(View.INVISIBLE);
+//                    btn_Add.setVisibility(View.INVISIBLE);
+//                    radio_btc.setVisibility(View.INVISIBLE);
+//                    radio_eth.setVisibility(View.INVISIBLE);
+//                    recyclerView.setVisibility(View.INVISIBLE);
+//                    Glide.with(this).onDestroy();
+//
+//
+//                } catch (Exception e) {
+//                }
                 break;
             default:
                 fragmentClass = HomeActivity.class;
@@ -531,5 +568,15 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
         setTitle(menuItem.getItemId());
         mDrawerLayout.closeDrawers();
 
+    }
+
+    public static final Drawable getDrawable(Context context, int id) {
+        final int version = Build.VERSION.SDK_INT;
+        if (version >= 21) {
+
+            return ContextCompat.getDrawable(context, id);
+        } else {
+            return context.getResources().getDrawable(id);
+        }
     }
 }

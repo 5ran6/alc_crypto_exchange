@@ -28,7 +28,7 @@
         android:id="@+id/countries__btc"
         android:layout_width="75dp"
         android:layout_height="25dp"
-        android:entries="@array/flags"></Spinner>
+        android:entries="@array/flags1"></Spinner>
 
     <EditText
         android:layout_width="200dp"

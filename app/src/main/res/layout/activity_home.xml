@@ -90,40 +90,31 @@
                                         android:textColor="#ffffff" />
                                 </RadioGroup>
 
-                                <RelativeLayout
-                                    android:id="@+id/linearLayout1"
-                                    android:layout_width="150dp"
-                                    android:layout_height="60dp"
-                                    android:layout_marginTop="50dp"
-                                    android:background="@android:color/transparent"
-                                    android:padding="10dp"
-                                    android:textColor="@android:color/darker_gray">
-
-
-                                    <Spinner
-                                        android:id="@+id/quote_currency"
-                                        android:layout_width="fill_parent"
-                                        android:layout_height="wrap_content" />
-                                    <!-- android:theme="?android:attr/borderlessButtonStyle"-->
-
-
-                                </RelativeLayout>
 
                                 <RelativeLayout
                                     android:id="@+id/linearLayout2"
                                     android:layout_width="150dp"
-                                    android:layout_height="60dp"
+                                    android:layout_height="100dp"
                                     android:layout_alignParentEnd="true"
                                     android:layout_alignParentRight="true"
+
                                     android:layout_below="@+id/radioGroup"
                                     android:background="@android:color/transparent"
                                     android:padding="10dp"
                                     android:textColor="@android:color/darker_gray">
 
-                                    <Button
-                                        android:id="@+id/add_button"
+                                    <Spinner
+                                        android:id="@+id/quote_currency"
+                                        style="@style/mySpinnerItemStyle"
                                         android:layout_width="fill_parent"
                                         android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/lily_white" />
+
+                                    <Button
+                                        android:id="@+id/add_button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/quote_currency"
                                         android:background="@drawable/custom_btn_green_pearl"
                                         android:text="Add"
                                         android:textColor="@android:color/white" />

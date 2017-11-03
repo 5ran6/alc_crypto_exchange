@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/White"
+    android:gravity="center"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true">
 
     <TextView
         android:id="@+id/login_title"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="22dp"
@@ -36,28 +37,16 @@
             android:orientation="vertical"
             android:paddingTop="30dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="279dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:paddingTop="5dp"
-                android:text="Is your base currency"
-                android:textAlignment="center" />
-
             <EditText
-                android:id="@+id/quote_currency_conversion"
-                android:layout_width="fill_parent"
+                android:id="@+id/base_currency_conversion"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/custom_btn_orange"
-                android:enabled="false"
-                android:focusable="false"
+                android:layout_gravity="center"
+                android:background="@color/lily_white"
+                android:drawableTint="#FF4081"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
-                android:text="loading..."
-                android:textAlignment="center"
-                android:textColor="@color/gray_blue" />
+                android:textAlignment="center" />
 
 
             <android.support.design.widget.TextInputLayout
@@ -66,25 +55,43 @@
 
 
                 <EditText
-                    android:id="@+id/base_currency_conversion"
-                    android:layout_width="fill_parent"
+                    android:id="@+id/quote_currency_conversion"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
                     android:background="@color/lily_white"
-                    android:drawableTint="#FF4081"
-                    android:inputType="numberDecimal"
+                    android:enabled="false"
+                    android:focusable="false"
                     android:singleLine="true"
-                    android:textAlignment="center" />
+                    android:text="refreshing..."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark" />
 
 
             </android.support.design.widget.TextInputLayout>
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:text="Your current currency"
+
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
             <Button
                 android:id="@+id/back_btn"
-                android:layout_width="fill_parent"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="22dp"
                 android:background="@drawable/custom_btn_black_pearl"
-                android:text="Back"
+                android:gravity="center"
+                android:text="Home"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="18sp" />
@@ -101,5 +108,5 @@
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:elevation="4dp"
-        android:src="@drawable/btc_txt" />
+        android:src="@drawable/btctxt" />
 </RelativeLayout>

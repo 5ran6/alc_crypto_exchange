@@ -158,7 +158,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-          //      showPopupMenu(holder.overflow);
+               showPopupMenu(holder.overflow);
                 //record the position of clicked item to access it from the PopupMenu
                 ITEM_POSITION = position;
             }
@@ -170,58 +170,49 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
     /**
      * Showing popup menu when tapping on 3 dots
      */
-//    private void showPopupMenu(View view) {
-//        // inflate menu
-//        PopupMenu popup = new PopupMenu(mContext, view);
-//        MenuInflater inflater = popup.getMenuInflater();
-//        inflater.inflate(R.menu.menu_currency, popup.getMenu());
-//        popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
-//        popup.show();
-//    }
+    private void showPopupMenu(View view) {
+        // inflate menu
+        PopupMenu popup = new PopupMenu(mContext, view);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.menu_currency, popup.getMenu());
+        popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
+        popup.show();
+    }
 
     /**
      * Click listener for popup menu items
      */
-//    class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
-//
-//        public MyMenuItemClickListener() {
-//
-//        }
-//
-//        @Override
-//        public boolean onMenuItemClick(MenuItem menuItem) {
-//            switch (menuItem.getItemId()) {
-//                case R.id.action_conversion:
-//
-//                    Intent theIntent = new Intent(mContext, ConversionActivity.class);
-//                    theIntent.putExtra("crypto_position", ITEM_POSITION);
-//                    mContext.startActivity(theIntent);
-//                    HomeActivity homeActivity = new HomeActivity();
-//                    homeActivity.finish();
-//                    return true;
-//
-//                case R.id.action_remove:
-//                    //delete and refresh the list to effect the changes
-//                    //the shared preferenceListener methon in HomeActivity will update UI once an item has been removed
-//                    int count  = currencyList.size()-1;//our new List_size will be initial size - 1;
-//                    currencyList.remove(ITEM_POSITION);
-//
-//                    for(int i = 0; i< currencyList.size(); i++)
-//                    {
-//                            editor.remove("List_" + i);
-//                            editor.putString("List_" + i, currencyList.get(i).getName() + "#" +currencyList.get(i).getSymbol() + "#" + currencyList.get(i).getThumbnail());
-//
-//
-//                    }
-//                    editor.putInt("List_size", count);
-//                    editor.commit();
-//                    Toast.makeText(mContext, "Deleted!", Toast.LENGTH_SHORT).show();
-//                    return true;
-//                default:
-//            }
-//            return false;
-//        }
-//    }
+    class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
+
+        public MyMenuItemClickListener() {
+
+        }
+
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+                case R.id.remove:
+                    //delete and refresh the list to effect the changes
+                    //the shared preferenceListener methon in HomeActivity will update UI once an item has been removed
+                    int count  = currencyList.size()-1;//our new List_size will be initial size - 1;
+                    currencyList.remove(ITEM_POSITION);
+
+                    for(int i = 0; i< currencyList.size(); i++)
+                    {
+                            editor.remove("List_" + i);
+                            editor.putString("List_" + i, currencyList.get(i).getName() + "#" +currencyList.get(i).getSymbol() + "#" + currencyList.get(i).getThumbnail());
+
+
+                    }
+                    editor.putInt("List_size", count);
+                    editor.commit();
+                    Toast.makeText(mContext, "Deleted!", Toast.LENGTH_SHORT).show();
+                    return true;
+                default:
+            }
+            return false;
+        }
+    }
 
     @Override
     public int getItemCount() {
