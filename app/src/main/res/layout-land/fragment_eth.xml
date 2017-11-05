@@ -2,14 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_img"
     tools:context="crytocompare.com.cryptoexchange.ETH">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
-    android:padding="10dp"    android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="horizontal"
+        android:padding="10dp"
         android:weightSum="2">
 
         <LinearLayout
@@ -19,18 +21,81 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/eth_"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/eth_"
-                android:textColor="@color/Black"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
 
-                android:textSize="20sp"
-                android:textStyle="italic|bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\n" />
 
-            <include layout="@layout/card_eth_currency" />
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/eth" />
+
+                <EditText
+                    android:id="@+id/eth_value"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+                    android:hint="@string/enter_amount_eth"
+
+                    android:inputType="numberDecimal"
+                    android:textSize="10dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/eth_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/eth_"
+                    android:textColor="@color/Black"
+                    android:textStyle="italic|bold" />
+
+
+                <ImageView
+                    android:id="@+id/eth_currency_flag"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/coins" />
+
+                <Spinner
+                    android:id="@+id/eth_currency"
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:entries="@array/flags1"></Spinner>
+
+
+                <TextView
+                    android:id="@+id/eth_currency_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:gravity="center"
+                    android:hint="@string/equivalent_amount"
+                    android:textStyle="italic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <Button
+                    android:id="@+id/convert_eth_currency"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/custom_btn_black_pearl"
+                    android:text="@string/convert"
+                    android:textColor="@color/White"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -42,26 +107,101 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/_eth"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/_eth"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:textStyle="italic|bold" />
+                android:orientation="vertical">
 
-            <include layout="@layout/card_currency_eth" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\n" />
 
+                <ImageView
+                    android:id="@+id/currency_eth_flag"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/coins" />
+
+                <Spinner
+                    android:id="@+id/currency_eth"
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:entries="@array/flags1"></Spinner>
+
+                <EditText
+                    android:id="@+id/value_eth"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:hint="@string/enter_amount"
+                    android:inputType="numberDecimal"
+                    android:textSize="10dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/_eth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/_eth"
+                    android:textColor="@color/Black"
+
+                    android:textStyle="italic|bold" />
+
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/eth" />
+
+
+                <TextView
+                    android:id="@+id/currency_eth_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:gravity="center"
+                    android:hint="Equivalent amount in ETH"
+                    android:textStyle="italic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <Button
+                    android:id="@+id/convert_currency_eth"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/custom_btn_orange"
+                    android:text="@string/convert"
+                    android:textColor="@color/White"
+                    android:textStyle="italic" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/progress_ETH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/home"
-            android:layout_gravity="bottom|end"
-            android:src="@android:drawable/ic_menu_today" />
+
 
     </LinearLayout>
-
 </FrameLayout>

@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_img"
-    tools:context="crytocompare.com.cryptoexchange.Dashboard">
+    tools:context="crytocompare.com.cryptoexchange.ETH">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
-        android:id="@+id/dashboard_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="10dp"
         android:weightSum="2">
 
@@ -22,6 +21,18 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/eth_"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/eth_"
+                android:textColor="@color/Black"
+
+                android:textSize="20sp"
+                android:textStyle="italic|bold" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,101 +40,10 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="\n\n" />
 
                 <ImageView
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/btc_icon" />
-
-                <EditText
-                    android:id="@+id/btc_value"
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-
-
-                    android:gravity="center"
-                    android:hint="Enter the amount of Bitcoin"
-                    android:inputType="numberDecimal"
-                    android:textSize="10dp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:id="@+id/btc_"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/btc_"
-                    android:textColor="@color/Black"
-
-                    android:textStyle="italic|bold" />
-
-                <ImageView
-                    android:id="@+id/btc_currency_flag"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/coins" />
-
-                <Spinner
-                    android:id="@+id/countries_btc_dash"
                     android:layout_width="75dp"
-                    android:layout_height="25dp"
-                    android:entries="@array/flags1"></Spinner>
-
-
-                <TextView
-                    android:id="@+id/btc_currency"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-
-                    android:gravity="center"
-                    android:hint="@string/equivalent_amount"
-                    android:textStyle="italic" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp" />
-
-                <Button
-                    android:id="@+id/convert_btc_currency"
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/custom_btn_black_pearl"
-                    android:text="@string/convert"
-                    android:textColor="@color/White"
-                    android:textStyle="italic" />
-
-
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="\n\n" />
-
-
-                <ImageView
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_height="75dp"
                     android:src="@drawable/eth" />
 
                 <EditText
@@ -138,32 +58,26 @@
                     android:textSize="10dp"
                     android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/eth_"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/eth_"
-                    android:textColor="@color/Black"
-
-                    android:textStyle="italic|bold" />
+                    android:layout_height="2dp" />
 
 
                 <ImageView
                     android:id="@+id/eth_currency_flag"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:src="@drawable/coins" />
 
                 <Spinner
-                    android:id="@+id/countries_eth_dash"
+                    android:id="@+id/eth_currency"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
                     android:entries="@array/flags1"></Spinner>
 
 
                 <TextView
-                    android:id="@+id/eth_currency"
+                    android:id="@+id/eth_currency_result"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
@@ -177,8 +91,107 @@
                 <Button
                     android:id="@+id/convert_eth_currency"
                     android:layout_width="150dp"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/custom_btn_black_pearl"
+                    android:text="@string/convert"
+                    android:textColor="@color/White"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/_eth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_eth"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="italic|bold" />
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="center"
+                    android:text="X"
+                    android:textColor="@color/Red"
+                    android:textSize="10dp"
+                    android:visibility="gone"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/currency_eth_flag"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/coins" />
+
+                <Spinner
+                    android:id="@+id/currency_eth"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:entries="@array/flags1"></Spinner>
+
+                <EditText
+                    android:id="@+id/value_eth"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:hint="@string/enter_amount"
+                    android:inputType="numberDecimal"
+                    android:textSize="10dp"
+                    android:textStyle="italic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/eth" />
+
+
+                <TextView
+                    android:id="@+id/currency_eth_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:hint="Equivalent amount in ETH"
+                    android:textStyle="italic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <Button
+                    android:id="@+id/convert_currency_eth"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/custom_btn_orange"
                     android:text="@string/convert"
                     android:textColor="@color/White"
                     android:textStyle="italic" />
@@ -190,7 +203,7 @@
                     android:orientation="horizontal">
 
                     <ProgressBar
-                        android:id="@+id/progressETH_"
+                        android:id="@+id/progress_ETH"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:visibility="invisible" />

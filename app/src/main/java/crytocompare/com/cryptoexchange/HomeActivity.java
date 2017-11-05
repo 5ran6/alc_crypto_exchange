@@ -76,6 +76,7 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
     private int animDuration = 200;
     private float sD;
     Resources res;
+    Fragment myFragment = null;
 
     @Override
     public void onBackPressed() {
@@ -104,7 +105,10 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        if (savedInstanceState != null) {
+            //Restore the fragment's instance
+//            myFragment = getSupportFragmentManager().getFragment(savedInstanceState, myFragment.toString());
+        }
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nv);
@@ -203,7 +207,6 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
         //Initialize cover image in android.support.design.widget.CollapsingToolbarLayout background
         try {
             Glide.with(this).load(R.drawable.btceth).into(img_cover);
-
         } catch (Exception e) {
         }
 
@@ -276,7 +279,6 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
         }
     }
 
-
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         // handle the preference change here i.e on delete
@@ -337,6 +339,16 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
         }
 
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        //Save the fragment's instance
+//        final Fragment fragmentInFrame = getSupportFragmentManager().findFragmentById(R.id.flcontent);
+//
+//          getSupportFragmentManager().putFragment(outState, fragmentInFrame.getTag(), fragmentInFrame);
     }
 
     @Override
@@ -456,7 +468,7 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void selectItemDrawer(MenuItem menuItem) {
-        Fragment myFragment = null;
+        myFragment = null;
         Class fragmentClass;
         switch (menuItem.getItemId()) {
             case R.id.dashboard:
@@ -465,11 +477,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText("");
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
-                    base_spinner.setVisibility(View.INVISIBLE);
-                    btn_Add.setVisibility(View.INVISIBLE);
-                    radio_btc.setVisibility(View.INVISIBLE);
-                    radio_eth.setVisibility(View.INVISIBLE);
-                    recyclerView.setVisibility(View.INVISIBLE);
+                    base_spinner.setVisibility(View.GONE);
+                    btn_Add.setVisibility(View.GONE);
+                    radio_btc.setVisibility(View.GONE);
+                    radio_eth.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.GONE);
 
                 } catch (Exception e) {
                 }
@@ -480,11 +492,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText(R.string.current_currency);
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
-                    base_spinner.setVisibility(View.INVISIBLE);
-                    btn_Add.setVisibility(View.INVISIBLE);
-                    radio_btc.setVisibility(View.INVISIBLE);
-                    radio_eth.setVisibility(View.INVISIBLE);
-                    recyclerView.setVisibility(View.INVISIBLE);
+                    base_spinner.setVisibility(View.GONE);
+                    btn_Add.setVisibility(View.GONE);
+                    radio_btc.setVisibility(View.GONE);
+                    radio_eth.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.GONE);
 
                 } catch (Exception e) {
                 }
@@ -495,12 +507,13 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText(R.string.current_currency);
 //              curentCurrency.setImageDrawable(ContextCompat.getDrawable(Launcher.this, R.drawable.eth_icon));
                 try {
+//mainLay.setVisibility(View.GONE);
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
-                    base_spinner.setVisibility(View.INVISIBLE);
-                    btn_Add.setVisibility(View.INVISIBLE);
-                    radio_btc.setVisibility(View.INVISIBLE);
-                    radio_eth.setVisibility(View.INVISIBLE);
-                    recyclerView.setVisibility(View.INVISIBLE);
+                    base_spinner.setVisibility(View.GONE);
+                    btn_Add.setVisibility(View.GONE);
+                    radio_btc.setVisibility(View.GONE);
+                    radio_eth.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.GONE);
 
                 } catch (Exception e) {
                 }
@@ -512,11 +525,11 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 currentTextView.setText("");
                 try {
                     Glide.with(this).load(R.drawable.background_img).into(img_cover);
-                    base_spinner.setVisibility(View.INVISIBLE);
-                    btn_Add.setVisibility(View.INVISIBLE);
-                    radio_btc.setVisibility(View.INVISIBLE);
-                    radio_eth.setVisibility(View.INVISIBLE);
-                    recyclerView.setVisibility(View.INVISIBLE);
+                    base_spinner.setVisibility(View.GONE);
+                    btn_Add.setVisibility(View.GONE);
+                    radio_btc.setVisibility(View.GONE);
+                    radio_eth.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.GONE);
 
                 } catch (Exception e) {
                 }
@@ -527,24 +540,24 @@ public class HomeActivity extends AppCompatActivity implements SharedPreferences
                 curentCurrency.setImageResource(R.drawable.exit);
                 currentTextView.setText("");
                 Glide.with(this).load(R.drawable.background_img).into(img_cover);
-                base_spinner.setVisibility(View.INVISIBLE);
-                btn_Add.setVisibility(View.INVISIBLE);
-                radio_btc.setVisibility(View.INVISIBLE);
-                radio_eth.setVisibility(View.INVISIBLE);
-                recyclerView.setVisibility(View.INVISIBLE);
-             //     Glide.with(this).onDestroy();
+                base_spinner.setVisibility(View.GONE);
+                btn_Add.setVisibility(View.GONE);
+                radio_btc.setVisibility(View.GONE);
+                radio_eth.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.GONE);
+                //     Glide.with(this).onDestroy();
 
 //
 //                //mainLay.setBackground(getDrawable(this, R.drawable.background_img));
 //                try {
 //                    //                 Glide.with(this).load(R.drawable.background_img).into(img_cover);
 //                    //mainLay.setBackground(getDrawable(getApplicationContext(), R.drawable.background_img));
-//                    //      mainLay.setVisibility(View.INVISIBLE);
-//                    base_spinner.setVisibility(View.INVISIBLE);
-//                    btn_Add.setVisibility(View.INVISIBLE);
-//                    radio_btc.setVisibility(View.INVISIBLE);
-//                    radio_eth.setVisibility(View.INVISIBLE);
-//                    recyclerView.setVisibility(View.INVISIBLE);
+//                    //      mainLay.setVisibility(View.GONE);
+//                    base_spinner.setVisibility(View.GONE);
+//                    btn_Add.setVisibility(View.GONE);
+//                    radio_btc.setVisibility(View.GONE);
+//                    radio_eth.setVisibility(View.GONE);
+//                    recyclerView.setVisibility(View.GONE);
 //                    Glide.with(this).onDestroy();
 //
 //
