@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#031983"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="crytocompare.com.cryptoexchange.Splash">
 
     <ImageView
-        android:id="@+id/img"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:src="@drawable/splash0" >
-
-
-    </ImageView>
+        android:id="@+id/img"
+        android:layout_height="270dp"
+        android:layout_gravity="top"
+        android:src="@drawable/splash0" />
 
     <ProgressBar
         android:layout_width="wrap_content"
