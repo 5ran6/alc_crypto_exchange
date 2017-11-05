@@ -97,7 +97,7 @@ public class ConversionActivity extends AppCompatActivity {
                                 }
 
                             } else {
-                                Toast.makeText(getApplicationContext(), "error, check your internet connection!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "error, check your internet connection!", Toast.LENGTH_SHORT).show();
                                 Log.e(this.getClass().toString(), "Request unsuccessful: " + response);
                             }
                         }
@@ -168,7 +168,7 @@ public class ConversionActivity extends AppCompatActivity {
                                 }
 
                             } else {
-                                Toast.makeText(getApplicationContext(), "error, check your internet connection!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "error, check your internet connection!", Toast.LENGTH_SHORT).show();
                                 Log.e(this.getClass().toString(), "Request unsuccessful: " + response);
                             }
                         }
