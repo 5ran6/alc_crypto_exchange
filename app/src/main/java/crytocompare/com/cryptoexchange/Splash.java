@@ -33,7 +33,7 @@ public class Splash extends AppCompatActivity {
 
             }
         };
-        animation.setDuration(3000); // duration - 3 seconds
+        animation.setDuration(2000); // duration - 2 seconds
         animation.setInterpolator(new LinearInterpolator()); // do not alter animation rate
         animation.setRepeatCount(Animation.INFINITE); // Repeat animation infinitely
         animation.setRepeatMode(Animation.REVERSE); // Reverse animation at the end so the button will fade back in
@@ -48,6 +48,5 @@ public class Splash extends AppCompatActivity {
                 finish();
             }
         }, 4000); // 4000 milliseconds delay
-
     }
 }
