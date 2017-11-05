@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="10dp"
         android:weightSum="2">
 
         <LinearLayout
@@ -22,33 +21,27 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/btc_"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/btc_"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:textStyle="italic|bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="30dp">
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\n" />
 
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/btc_icon" />
 
                 <EditText
                     android:id="@+id/btc_value"
                     android:layout_width="200dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
 
 
                     android:gravity="center"
@@ -57,14 +50,18 @@
                     android:textSize="10dp"
                     android:textStyle="italic" />
 
-                <View
+                <TextView
+                    android:id="@+id/btc_"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp" />
-
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/btc_"
+                    android:textColor="@color/Black"
+                    android:textStyle="italic|bold" />
                 <ImageView
                     android:id="@+id/btc_currency_flag"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/coins" />
 
                 <Spinner
@@ -77,20 +74,16 @@
                 <TextView
                     android:id="@+id/btc_currency"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="20dp"
 
                     android:gravity="center"
                     android:hint="@string/equivalent_amount"
                     android:textStyle="italic" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp" />
-
                 <Button
                     android:id="@+id/convert_btc_currency"
                     android:layout_width="150dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/custom_btn_black_pearl"
                     android:text="@string/convert"
                     android:textColor="@color/White"
@@ -107,34 +100,23 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/eth_"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/eth_"
-                android:textColor="@color/Black"
-
-                android:textSize="20sp"
-                android:textStyle="italic|bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="30dp">
+                android:orientation="vertical">
 
 
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/eth" />
 
                 <EditText
                     android:id="@+id/eth_value"
                     android:layout_width="200dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
 
                     android:gravity="center"
                     android:hint="@string/enter_amount_eth"
@@ -143,15 +125,20 @@
                     android:textSize="10dp"
                     android:textStyle="italic" />
 
-                <View
+                <TextView
+                    android:id="@+id/eth_"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/eth_"
+                    android:textColor="@color/Black"
 
+                    android:textStyle="italic|bold" />
 
                 <ImageView
                     android:id="@+id/eth_currency_flag"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/coins" />
 
                 <Spinner
@@ -164,19 +151,15 @@
                 <TextView
                     android:id="@+id/eth_currency"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="20dp"
                     android:gravity="center"
                     android:hint="@string/equivalent_amount"
                     android:textStyle="italic" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp" />
-
                 <Button
                     android:id="@+id/convert_eth_currency"
                     android:layout_width="150dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/custom_btn_black_pearl"
                     android:text="@string/convert"
                     android:textColor="@color/White"

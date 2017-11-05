@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="10dp"
         android:weightSum="2">
 
         <LinearLayout
@@ -21,29 +20,19 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/eth_"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/eth_"
-                android:textColor="@color/Black"
-
-                android:textSize="20sp"
-                android:textStyle="italic|bold" />
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical">
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\n" />
 
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/eth" />
 
                 <EditText
@@ -58,15 +47,21 @@
                     android:textSize="10dp"
                     android:textStyle="italic" />
 
-                <View
+                <TextView
+                    android:id="@+id/eth_"
+
                     android:layout_width="match_parent"
-                    android:layout_height="2dp" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/eth_"
+                    android:textColor="@color/Black"
+                    android:textStyle="italic|bold" />
 
 
                 <ImageView
                     android:id="@+id/eth_currency_flag"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/coins" />
 
                 <Spinner
@@ -91,7 +86,7 @@
                 <Button
                     android:id="@+id/convert_eth_currency"
                     android:layout_width="150dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/custom_btn_black_pearl"
                     android:text="@string/convert"
                     android:textColor="@color/White"
@@ -114,18 +109,8 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/_eth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/_eth"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:textStyle="italic|bold" />
 
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -145,8 +130,8 @@
 
                 <ImageView
                     android:id="@+id/currency_eth_flag"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/coins" />
 
                 <Spinner
@@ -158,20 +143,25 @@
                 <EditText
                     android:id="@+id/value_eth"
                     android:layout_width="200dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:gravity="center"
                     android:hint="@string/enter_amount"
                     android:inputType="numberDecimal"
                     android:textSize="10dp"
                     android:textStyle="italic" />
 
-                <View
+                <TextView
+                    android:id="@+id/_eth"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/_eth"
+                    android:textColor="@color/Black"
+                    android:textStyle="italic|bold" />
 
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:src="@drawable/eth" />
 
 
@@ -183,14 +173,11 @@
                     android:hint="Equivalent amount in ETH"
                     android:textStyle="italic" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp" />
 
                 <Button
                     android:id="@+id/convert_currency_eth"
                     android:layout_width="150dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/custom_btn_orange"
                     android:text="@string/convert"
                     android:textColor="@color/White"
