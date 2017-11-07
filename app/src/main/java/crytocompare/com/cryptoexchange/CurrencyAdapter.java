@@ -25,7 +25,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 /**
- * Created by Levit Nudi on 14/10/17.
+ * Created by 5ran6 on 25/10/17.
  */
 
 public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyViewHolder> {

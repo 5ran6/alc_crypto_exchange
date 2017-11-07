@@ -1,7 +1,7 @@
 package crytocompare.com.cryptoexchange;
 
 /**
- * Created by Levit Nudi on 14/10/17.
+ * Created by 5ran6 on 24/10/17.
  */
 
 import android.animation.Animator;
