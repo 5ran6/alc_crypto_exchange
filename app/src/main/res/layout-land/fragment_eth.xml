@@ -70,7 +70,7 @@
                     android:id="@+id/eth_currency"
                     android:layout_width="75dp"
                     android:layout_height="20dp"
-                    android:entries="@array/flags1"></Spinner>
+                    android:entries="@array/flags1"/>
 
 
                 <TextView
@@ -129,7 +129,7 @@
                     android:id="@+id/currency_eth"
                     android:layout_width="75dp"
                     android:layout_height="20dp"
-                    android:entries="@array/flags1"></Spinner>
+                    android:entries="@array/flags1"/>
 
                 <EditText
                     android:id="@+id/value_eth"
@@ -163,7 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="15dp"
                     android:gravity="center"
-                    android:hint="Equivalent amount in ETH"
+                    android:hint="@string/eq_eth"
                     android:textStyle="italic" />
 
                 <View

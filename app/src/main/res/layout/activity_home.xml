@@ -79,7 +79,7 @@
                                         android:background="@drawable/radio_button_left"
                                         android:button="@android:color/transparent"
                                         android:checked="true"
-                                        android:text="Bitcoin (BTC)"
+                                        android:text="@string/btc"
                                         android:textColor="#ffffff" />
 
                                     <RadioButton
@@ -88,7 +88,7 @@
                                         android:layout_height="wrap_content"
                                         android:background="@drawable/radio_button_right"
                                         android:button="@android:color/transparent"
-                                        android:text="Ethereum (ETH)"
+                                        android:text="@string/eth"
                                         android:textColor="#ffffff" />
                                 </RadioGroup>
 
@@ -121,7 +121,7 @@
                                         android:layout_below="@id/quote_currency"
                                         android:layout_weight="40"
                                         android:background="@drawable/custom_btn_green_pearl"
-                                        android:text="Add"
+                                        android:text="@string/add"
                                         android:textColor="@android:color/white" />
                                 </LinearLayout>
 
@@ -197,7 +197,7 @@
             app:headerLayout="@layout/header"
             app:itemIconTint="@color/_grey_605E5C"
             app:itemTextColor="@color/_grey_605E5C"
-            app:menu="@menu/drawermenu"></android.support.design.widget.NavigationView>
+            app:menu="@menu/drawermenu" />
 
     </android.support.v4.widget.DrawerLayout>
 </merge>

@@ -46,7 +46,7 @@
 
 
                     android:gravity="center"
-                    android:hint="Enter the amount of Bitcoin"
+                    android:hint="@string/amt_btc"
                     android:inputType="numberDecimal"
                     android:textSize="10dp"
                     android:textStyle="italic" />
@@ -71,7 +71,7 @@
                     android:id="@+id/countries_btc_dash"
                     android:layout_width="75dp"
                     android:layout_height="25dp"
-                    android:entries="@array/flags1"></Spinner>
+                    android:entries="@array/flags1" />
 
 
                 <TextView

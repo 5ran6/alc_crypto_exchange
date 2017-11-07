@@ -47,7 +47,7 @@
         android:id="@+id/countries_btc_"
         android:layout_width="75dp"
         android:layout_height="25dp"
-        android:entries="@array/flags1"></Spinner>
+        android:entries="@array/flags1"/>
 
 
     <TextView
